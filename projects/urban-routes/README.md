@@ -18,8 +18,9 @@ Aplicación de transporte compartido. Pruebas enfocadas en flujos clave del boot
 - Tablas de decisión para combinaciones
 
 **Resultados destacados**  
-- Identifiqué X inconsistencias en el cálculo de precios  
-- Reporté Y bugs de severidad media-alta
+- Comprobé los diseños de la página comparandolos con los requisitos brindados
+- Hice casos de prueba así como listas de comprobación para las funciones de la página
+- Realicé los informes de errores respectivos en jira, haciendo un total de 11
 
 **Evidencias**  
 Ver carpeta /evidencias/
