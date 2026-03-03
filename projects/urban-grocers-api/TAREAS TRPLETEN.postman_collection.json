@@ -1,0 +1,345 @@
+{
+  "info": {
+    "_postman_id": "a3dd95fd-43d9-4e20-9bb2-6a447e38c933",
+    "name": "TAREAS TRPLETEN",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52150352",
+    "_collection_link": "https://go.postman.co/collection/52150352-a3dd95fd-43d9-4e20-9bb2-6a447e38c933?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Obtener kits",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer f6c4192a-cbf8-44ac-b66d-b3339f75da0f",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/api/v1/kits/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "9"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Kits",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer f6c4192a-cbf8-44ac-b66d-b3339f75da0f",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cardId\": 1,\r\n    \"name\": \"kit de prueba\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/kits",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear NUevo Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"firstName\": \"Francisco\",\r\n    \"phone\": \"+13245678901\",\r\n    \"address\": \"Calle Central 123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/users",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Busqueda de kits por producto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"ids\": [44]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/products/kits",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "products",
+            "kits"
+          ],
+          "query": [
+            {
+              "key": "ids []",
+              "value": "number",
+              "description": "El id del product a buscar",
+              "type": "text",
+              "disabled": true
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar productos a un kit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"productsList\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/kits/:id/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits",
+            ":id",
+            "products"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "9"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Modificar Kit",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n     \"name\": \"Kit de cawn prueba\",\r\n    \"productsList\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/v1/kits/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Borrar Kit",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/kits/:id",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "kits",
+            ":id"
+          ],
+          "variable": [
+            {
+              "key": "id",
+              "value": "7"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Everything You Need",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"deliveryTime\": 6,\r\n    \"products\": [\r\n        {\r\n            \"id\": 1,\r\n            \"quantity\": 3\r\n        },\r\n        {\r\n            \"id\": 4,\r\n            \"quantity\": 2\r\n        }\r\n    ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/everything-you-need/v1/calculate",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "everything-you-need",
+            "v1",
+            "calculate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Everything You Need Delivery Time",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"deliveryTime\": 15,\r\n  \"productsCount\": 8,\r\n  \"productsWeight\": 6.1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/order-and-go/v1/delivery",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "order-and-go",
+            "v1",
+            "delivery"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Food City Delivery Time",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<InputModel>\r\n    <deliveryTime></deliveryTime>\r\n    <product id=\"1\" quantity=\"2\" />\r\n</InputModel>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/food-city/calculate.xml",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "food-city",
+            "calculate.xml"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Obtener logs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/logs/secondary",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "logs",
+            "secondary"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
